@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Console Try\**" />
+    <Compile Remove="DotNet2Try.BL\**" />
+    <Compile Remove="DotNet2Try.DAL\**" />
+    <Content Remove="Console Try\**" />
+    <Content Remove="DotNet2Try.BL\**" />
+    <Content Remove="DotNet2Try.DAL\**" />
+    <EmbeddedResource Remove="Console Try\**" />
+    <EmbeddedResource Remove="DotNet2Try.BL\**" />
+    <EmbeddedResource Remove="DotNet2Try.DAL\**" />
+    <None Remove="Console Try\**" />
+    <None Remove="DotNet2Try.BL\**" />
+    <None Remove="DotNet2Try.DAL\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.8" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="TagLibSharp" Version="2.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="DotNet2Try.DAL\DotNet2Try.DAL\DotNet2Try.DAL.csproj" />
+  </ItemGroup>
+
+</Project>
